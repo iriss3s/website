@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center -30px;
+    display: grid;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    font-weight: normal;
+}
+h1{
+  font-size: 4.5rem;
+}
+h3{
+  font-size: 16px;
+  color: white;
+}
+p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    padding-top: 100px;
+}
+/*END OF RESET*/
+
+body{
+    margin: 0px auto;
+    background-color: rgb(238, 78, 155);
+}
+h1{
+    font-family: "amador", sans-serif;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    margin: 16px 0px 16px 0px;
+}
+#section1{
+padding-top: 20%; 
+text-align:center
+}
+/*----------NAVIGATION-------*/
+nav{
+    text-align: center;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    
+}
+nav a, nav p{
+    margin-left: 12px;
+}
+
+nav p{
+    display: inline;
+    color: rgb(255, 255, 255);
+}
+nav a:hover{
+    color:rgb(238, 78, 155);
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 20px;
+}
+
+/*-------------MAIN HOME------------*/
+.main-flex img{
+    width: 40%;
+}
+.background-home {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 40px);
+  background-image: url(images/HLR1.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -2; /* lowest layer */
+}
+.glass-overlay {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px) brightness(0.9); /* creates the glass effect */
+  background: rgba(255, 255, 255, 0.15); /* transparent white tint */
+  z-index: -1;
+}
+.home-content {
+  max-width: 1000px;
+  padding: 10rem;
+  background: rgba(255, 255, 255, 0.1); /* optional subtle box */
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.home-content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+/*---------------ABOUT------------------*/
+.about-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+.about-title-glass{
+    font-size: 4.5rem;
+    color: white;
+    margin: 0;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  max-width: 1200px;
+}
+.about-text-glass {
+  flex: 1;
+  min-width: 300px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  color: white;
+  line-height: 1.6;
+  padding-top: 50px;
+}
+.about-image-glass {
+  flex: 1;
+  min-width: 300px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-image-glass img{
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+/*------------FORM-----------------------*/
+.section-from{
+  background-color: white;
+  padding: 20px 80px 20px 80px;
+  width: 700px;
+  margin: 0px auto;
+}
+/*-------------WORK SECTION-------------*/
+.work-section {
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    padding: 20px;
+}
+.work-title-glass{
+    font-size: 4.5rem;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+    width: 100%;
+    min-height: 100vh;
+    place-items: center;
+}
+.work-box{
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/2;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+.glass-background{
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    z-index: 1;
+}
+.work-box img{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: inherit;
+    transition: transform 0.3s ease;
+}
+.hover-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.713);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3; 
+}
+.hover-overlay h2 {
+  color:rgb(238, 78, 155);
+  font-family: "amador", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Hover effects */
+.work-box:hover img {
+  transform: scale(1.05);
+}
+
+.work-box:hover .hover-overlay {
+  opacity: 1;
+}
+.work-box :hover{
+  transform: scale(1.02);
+}
+/*------------------PROJECTS-------------------*/
+.project-section{
+  padding: 40px;
+  
+}
+.glass-container{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+
+  border-radius: 16px;
+  padding: 20px 80px 20px 80px;
+  width: fit-content;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+.project-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 40px;
+}
+.project-images p{
+  padding-top: 50px;
+}
+/*------------------FOOTER-------------------*/
+footer{
+    border-top:1px solid black;
+    margin-top: 12px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer img{
+    height: 30px;
+    width: 30px;
+    margin-left: 12px;
+}
