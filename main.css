@@ -86,7 +86,7 @@ nav a:hover{
   left: 0;
   width: 100%;
   height: calc(100vh - 40px);
-  background-image: url(images/HLR1.jpg);
+  background-image: url(HLR1.jpg);
   background-size: cover;
   background-position: center;
   z-index: -2; /* lowest layer */
